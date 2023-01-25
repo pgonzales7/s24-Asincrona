@@ -1,0 +1,16 @@
+<main>
+    <ol>
+        <li>
+            <mat-form-field appearance="fill">
+                <mat-label>¿Cuál es tu nombre?</mat-label>
+                <input matInput [(ngModel)]="name" autocomplete="off">
+            </mat-form-field>
+        </li>
+        <li>
+            <button mat-raised-button (click)="openDialog()" [disabled]="!name">Abrir Dialog</button>
+        </li>
+        <li *ngIf="sport" class="sport-container">
+          Tu deporte favorito es: <i>{{sport}}</i>
+        </li>
+    </ol>
+</main>
